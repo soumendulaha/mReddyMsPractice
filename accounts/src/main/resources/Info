@@ -1,1 +1,47 @@
 This branch is created for Docker practice.
+Link to download docker = https://docs.docker.com/desktop/install/windows-install/
+
+How to install maven in local system and set its home path
+==========================================================
+To install Maven on your Windows system and set the Maven home path, follow these steps:
+
+### Step 1: Download Maven
+1. Go to the official Maven website: [Maven Download Page](https://maven.apache.org/download.cgi).
+2. Scroll down to **Files** and download the binary ZIP archive for the latest version.
+3. Once downloaded, extract the ZIP file to a directory (e.g., `C:\Program Files\Apache\Maven`).
+
+### Step 2: Set Up Environment Variables
+1. **Open Environment Variables:**
+   - Right-click on **This PC** (or **My Computer**) and select **Properties**.
+   - Click on **Advanced system settings** on the left-hand side.
+   - In the System Properties window, click on the **Environment Variables** button.
+
+2. **Set the `MAVEN_HOME` variable:**
+   - Under **System variables**, click on **New**.
+   - In the **Variable name**, type `MAVEN_HOME`.
+   - In the **Variable value**, paste the path where you extracted Maven (e.g., `C:\Program Files\Apache\Maven`).
+   - Click **OK**.
+
+3. **Edit the `PATH` variable:**
+   - In the **System variables**, find the **Path** variable and click **Edit**.
+   - Click **New** and add the path to the Maven `bin` directory (e.g., `C:\Program Files\Apache\Maven\bin`).
+   - Click **OK**.
+
+### Step 3: Verify Maven Installation
+1. Open a new Command Prompt (CMD).
+2. Type the following command:
+   ```bash
+   mvn -version
+   ```
+3. If Maven is correctly installed, you should see information about the Maven version, Java version, and your operating system.
+
+That's it! Maven is now installed and configured on your system.
+
+==================================================================================================
+mvn clean install
+clear
+mvn spring-boot:run
+cntrl + c is to stop the application
+======================================================================================================
+Java command to run the Jar
+java -jar .\target\accounts-0.0.1-SNAPSHOT.jar
